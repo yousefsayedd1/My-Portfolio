@@ -1,0 +1,419 @@
+html {
+    scroll-behavior: smooth;
+
+}
+body {
+    width: 100%;
+    font-family: "Poppins";
+}
+* {
+    margin: 0 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Start Global components */
+.spcial-heading
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+
+    
+}
+.spcial-heading h1 {
+    font-weight: 700;
+    color: #42446E;
+    font-size: 48px;
+    text-align: center;
+}
+.spcial-heading p {
+    font-weight: 400;
+    font-size: 32px;
+    text-align: center;
+    color: #666666;
+    margin-top: 21px;
+    margin-bottom: 138px;
+}
+@media (max-width : 800px) {
+    .spcial-heading p {
+        margin-bottom: 50px;
+        margin-top: 21px;
+    }
+    
+}
+.container {
+    width: 100%;
+    height: 100%;
+    max-width: 1193px;
+    height: auto;   
+
+}
+/* End Global components */
+/* Start nav */
+.navigation {
+    width: 100%;
+    /* height: 59px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 41px;
+    position: sticky;
+    top: 30px;
+}
+.navigation .container {
+    width: 100%;
+    height: 100%;
+    max-width: 1193px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation .container ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+.navigation .container ul li a {
+    text-decoration: none;
+    color: #666666;
+    margin-left: 51px;
+    font-family: "DM Sans";
+    font-weight: 500;
+    font-size: 20px;
+    
+}
+.navigation .container ul li a:hover {
+    background: linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navigation .container ul .links {
+    margin-left: 51px;
+    display: flex;
+    
+}
+.navigation .container ul .links li a{
+    margin-left: 21px;;
+}
+@media (max-width :804px) {
+    .navigation .container > ul {
+        display: none;
+    }
+    .navigation .container .hambarger {
+        display: block;
+    }
+}
+
+/* Start Slide bar  */
+/* Start menu icon */
+.navigation .container .hambarger {
+    width: 35px;
+    height: 35px;
+    margin-left: auto;
+    margin-right: 20px;
+    position: relative;
+    cursor: pointer;    
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    display: none;
+    z-index: 100;
+
+}
+.navigation .container .hambarger .bar,
+.navigation .container .hambarger::before, 
+.navigation .container .hambarger::after {
+    width: 100%;
+    content: "";
+    display: block;
+    background-color: black;
+    height: 5px;
+    margin: 6px 0px;
+    transition: 0.4s;
+
+}
+.navigation .container .hambarger.is-active::before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+.navigation .container .hambarger.is-active .bar {
+    opacity: 0;
+}
+.navigation .container .hambarger.is-active::after {
+    transform: rotate(45deg) translate(-9px, -8px);
+}
+@media (max-width :804px) {
+    
+    .navigation .container .hambarger {
+        display: block;
+    }
+    .navigation .container {
+        flex-direction: column;
+        position: relative;
+    }
+}
+/* End menu icon */
+/* Start Slide menu  */
+.navigation .container .mobile-nav {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    margin-top: 10px;
+    padding-top: 53px;
+    top: -40px;
+    position: absolute;
+    z-index: 10;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    opacity: 0;
+    
+    
+}
+
+.navigation .container .mobile-nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    opacity: inherit;
+    
+
+}
+.navigation .container .mobile-nav ul li  {
+    margin: 0 0  20px 0 ;
+    width: fit-content;
+    
+
+}
+.navigation .container .mobile-nav ul li a {
+    margin: 0;
+}
+.navigation .container .mobile-nav ul .links  {
+    margin-left: 25px;
+
+}
+.navigation .container .mobile-nav ul .links li a {
+    margin-right: 25px;
+}
+
+/* End Slide menu */
+/* End Slide bar  */
+/* End nav */
+/* Start landing */
+.landing {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.landing .container {
+    width: 100%;
+    max-width: 1193px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+.landing .container .content {
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 58px;
+    color: #42446E;
+}
+.landing .container .content p span {
+    background: linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@media (max-width: 900px) {
+    .landing .container {
+        flex-direction: column-reverse;
+        text-align: center;
+        align-items: center;
+    }
+    .landing .container .content {
+        font-size: 50px;
+    }
+}
+/* End landing */
+
+/* Start Stack */
+.stack {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stack .container .skills {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
+    grid-template-rows: auto;
+    row-gap: 20px;
+    
+    /* grid-gap:  */
+}
+
+.container .skills div {
+    width: 120px;
+    margin: 0 auto;
+    
+}
+.container .skills div img {
+    width: 100%;
+}
+@media (max-width: 800px) {
+    .container .skills {
+        flex-direction: column;
+    }    
+    .container .skills div {
+        width: 100%;
+    }
+}
+
+/* End Stack */
+/* Start Projects */
+.projects {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projects .container {
+    width: 100%;
+    height: 100%;
+}
+.projects .container .content {
+    width: 100%;
+    /* back for grid */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(383px, 1fr));
+    row-gap: 60px;
+}
+.projects .content .card {
+    width: 373px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 100px rgba(0, 0, 0, 0.2);
+    background-color: #eee;
+    align-self: center;
+    justify-self: center;
+}
+.projects .card img {
+    width: 100%;
+    height: 260px;
+}
+.projects .content .text {
+    padding: 0 29px  28px;
+}
+
+.projects .card .text h2 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-top: 5px;  
+    
+}
+.projects .card .text p {
+    font-size: 18px;
+    font-weight: 300;
+    color: #666666;
+    line-height: 26px;
+
+}
+
+.projects .card .text .teck-stack {
+    font-size: 14px;
+    color: #42446E;
+    line-height: 0px;
+}
+.projects .card .text .teck-stack span {
+    font-size: 16px ;
+    font-weight: 400;
+    line-height: 26px;
+    color: #42446E;
+}
+.projects .card .text .links {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 21px;
+}
+.projects .card .text .links .link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.projects .card .text .links .link img {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+}
+.projects .card .text .links .link a {
+    color: black;
+
+}
+
+/* End Projects */
+/* Start Footer */
+.footer {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.footer .upper {    
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+}
+.footer .upper .links {
+    margin-left: 51px;
+    
+}
+.footer .upper span {
+    font-family: "DM Sans";
+    font-weight: 400;
+    font-size: 18px;
+    color: #42446E;
+    margin-left: 63px;
+}
+.footer .upper .links a {
+    margin-left: 21px;
+}
+@media (max-width: 800px) {
+    .footer .upper {
+        flex-direction: column;
+        
+    }   
+    .footer .upper span {
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+}
+
+/* End Footer */
